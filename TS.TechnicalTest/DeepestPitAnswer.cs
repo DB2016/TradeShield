@@ -15,6 +15,14 @@ public class DeepestPitAnswer
             {
                 while (i < points.Length - 1 && points[i] <= points[i + 1]) // Start point
                     i++;
+
+                //DownwardIndex
+                int DownwardIndex = i;
+                while (i < points.Length - 1 && points[i] > points[i + 1])
+                {
+                    i++;
+                    DownwardIndex = i;
+                }
                 break;
             }
 
