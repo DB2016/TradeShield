@@ -9,7 +9,8 @@ public class DeepestPitAnswer
             if (points == null || points.Length < 3) //Elements count check, avoiding index exceptions ,
                 return -1;
 
-            int i = 0; 
+            int i = 0;
+            int maxDepthValue = -1;
 
             while (i < points.Length - 1)
             {
@@ -38,18 +39,22 @@ public class DeepestPitAnswer
                     i++;
                     rightPosition = points[i]; //Assign int value at position X 
                 }
-                 
-                break;
-            }
+                //Check position selection 
+                if (leftPosition > bottomPosition && rightPosition > bottomPosition)
+                {
+                    int depth = Math.Min(leftPosition - bottomPosition, rightPosition - bottomPosition);
+                    maxDepthValue = Math.Max(maxDepthValue, depth);
+                } 
 
-            return 4; //Forcefully pass with test with the test requirements (This will pass all test  with this commit) | Result should be dynamic value of type Int
+                return maxDepthValue; //Forcefully pass with test with the test requirements (This will pass all test  with this commit) | Result should be dynamic value of type Int
+            }
         }
         catch (Exception e)
         {
             //===========Bellow in sequence==========
             //Stack holder requirements: real rime reports if required
             //Logger to be added in my case as Denis Banda, i would normally register Serilog via DI in Program.cs, mostly implemented in Micro Service API hosted under IIS Either as a parent web app or a child web app in IIS with associated Service user aand App pool for each instance. | DB or File log (Preferablly file into a different net drive to avoid future performace issues) 
-        } 
+        }
         return -1;
     }
 }
