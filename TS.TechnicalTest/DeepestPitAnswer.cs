@@ -45,9 +45,9 @@ public class DeepestPitAnswer
                     int depth = Math.Min(leftPosition - bottomPosition, rightPosition - bottomPosition);
                     maxDepthValue = Math.Max(maxDepthValue, depth);
                 } 
+            }   
 
-                return maxDepthValue; //Forcefully pass with test with the test requirements (This will pass all test  with this commit) | Result should be dynamic value of type Int
-            }
+            return maxDepthValue; //Forcefully pass with test with the test requirements (This will pass all test  with this commit) | Result should be dynamic value of type Int
         }
         catch (Exception e)
         {
