@@ -57,4 +57,6 @@ public class DeepestPitAnswer
         }
         return -1;
     }
+    public static int GetPitDepth(int[] points) => Solution(points);
+
 }
