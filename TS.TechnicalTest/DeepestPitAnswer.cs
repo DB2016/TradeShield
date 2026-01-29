@@ -47,7 +47,7 @@ public class DeepestPitAnswer
                 } 
             }   
 
-            return maxDepthValue; //Forcefully pass with test with the test requirements (This will pass all test  with this commit) | Result should be dynamic value of type Int
+            return maxDepthValue; //Removed hard coded value
         }
         catch (Exception e)
         {
