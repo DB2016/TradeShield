@@ -5,7 +5,7 @@ public class LongestSentanceAnswer
 {
     public static int Solution(string sentencesValue)
     { 
-        if (string.IsNullOrWhiteSpace(sentencesValue)) //Check if the parameter has a value.
+        if (string.IsNullOrWhiteSpace(sentencesValue))
             return 0;
 
         var sentences = sentencesValue.Split('.', StringSplitOptions.RemoveEmptyEntries);
@@ -20,6 +20,6 @@ public class LongestSentanceAnswer
             maxWordCount = Math.Max(maxWordCount, words.Length);
         }
 
-        return maxWordCount; //maxWordCount returns dynamic word count: Int maxWordCount = 4 based on the test case. (Removed the hard coded value 4)
+        return maxWordCount;
     }
 }
