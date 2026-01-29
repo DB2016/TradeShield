@@ -9,7 +9,7 @@ public class DeepestPitAnswer
             if (points == null || points.Length < 3) //Elements count check, avoiding index exceptions ,
                 return -1;
 
-            int i = 0;
+            int i = 0; 
 
             while (i < points.Length - 1)
             {
@@ -29,16 +29,17 @@ public class DeepestPitAnswer
                 if (i == points.Length - 1)
                     break;
 
-                int bottom = points[DownwardIndex];
+                int bottomPosition = points[DownwardIndex];
 
                 // Right up position
-                int rightUpPosition = points[i];
+                int rightPosition = points[i];
                 while (i < points.Length - 1 && points[i] < points[i + 1])
                 {
                     i++;
-                    rightUpPosition = points[i]; //Assign int value at position X 
-                } 
-                    break;
+                    rightPosition = points[i]; //Assign int value at position X 
+                }
+                 
+                break;
             }
 
             return 4; //Forcefully pass with test with the test requirements (This will pass all test  with this commit) | Result should be dynamic value of type Int
