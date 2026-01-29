@@ -28,7 +28,7 @@ public class LongestSentanceAnswer
         catch (Exception e)
         {
             //===========Bellow in sequence==========
-            //Stack holder requirements: real rime reports if required
+            //Stack holder requirements: real time reports if required
             //Logger to be added in my case as Denis Banda, i would normally register Serilog via DI in Program.cs, mostly implemented in Micro Service API hosted under IIS Either as a parent web app or a child web app in IIS with associated Service user aand App pool for each instance. | DB or File log (Preferablly file into a different net drive to avoid future performace issues) 
         }
         return 0;
