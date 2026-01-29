@@ -16,7 +16,7 @@ public class DeepestPitAnswer
                 while (i < points.Length - 1 && points[i] <= points[i + 1]) // Start point
                     i++;
 
-                int leftPositioN = points[i]; //Required for validition, position check
+                int leftPosition = points[i]; //Required for validition, position check
 
                 //DownwardIndex
                 int DownwardIndex = i;
