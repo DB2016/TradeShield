@@ -23,7 +23,19 @@ public class DeepestPitAnswer
                     i++;
                     DownwardIndex = i;
                 }
-                break;
+
+                if (i == points.Length - 1)
+                    break;
+
+                int bottom = points[DownwardIndex];
+
+                // Right up position
+                int rightUpPosition = points[i];
+                while (i < points.Length - 1 && points[i] < points[i + 1])
+                {
+                    i++;
+                } 
+                    break;
             }
 
             return 4; //Forcefully pass with test with the test requirements (This will pass all test  with this commit) | Result should be dynamic value of type Int
