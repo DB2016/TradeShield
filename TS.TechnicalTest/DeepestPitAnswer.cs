@@ -34,6 +34,7 @@ public class DeepestPitAnswer
                 while (i < points.Length - 1 && points[i] < points[i + 1])
                 {
                     i++;
+                    rightUpPosition = points[i]; //Assign int value at position X 
                 } 
                     break;
             }
