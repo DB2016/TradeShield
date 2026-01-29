@@ -10,6 +10,16 @@ public class LongestSentanceAnswer
 
         var sentences = sentencesValue.Split('.', StringSplitOptions.RemoveEmptyEntries);
 
-        return 4; // Logic not complete forcefully passing the test while finalizing the busines logic (Context of BA Requirement) This commit will pass the test with the hard coded return Int 4
+        int maxWordCount = 0;
+
+        foreach (var sentence in sentences)
+        {
+            var words = sentence
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            maxWordCount = Math.Max(maxWordCount, words.Length);
+        }
+
+        return maxWordCount; //maxWordCount returns dynamic word count: Int maxWordCount = 4 based on the test case. (Removed the hard coded value 4)
     }
 }
